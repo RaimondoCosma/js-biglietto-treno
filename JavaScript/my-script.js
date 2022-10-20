@@ -24,7 +24,7 @@ if (isNaN(age)) {
     alert('Inserisci un numero corretto. La pagina verrà riavviata!')
     window.location.reload();
 }
-document.querySelector('#your-age').innerHTML = `${age}`;
+document.querySelector('#your-age').innerHTML = `${age} anni`;
 
 // 3. Imposto il prezzo del biglietto
 let trainPrice = myDistance * 0.21
@@ -40,13 +40,13 @@ if (age < 18) {
     trainPrice = trainPrice - youngCardPrice;
     console.log(`Ha diritto ad uno sconto del 20% come possessore della Carta Young: Prezzo = ${trainPrice.toFixed(2)}€`)
     document.querySelector('#discount-price').innerHTML = `<span style="color: green;">Scontato: ${trainPrice.toFixed(2)}€</span>`;
-    document.querySelector('#card-type').innerHTML = `<span style="color: blue;">Come possessore della Carta Young ha diritto ad uno sconto del 20% sul totale</span>`;
+    document.querySelector('#card-type').innerHTML = `<span style="color: red;">Come possessore della Carta Young ha diritto ad uno sconto del 20% sul totale</span>`;
 } else if (age >= 65){
     trainPrice = trainPrice - seniorCardPrice;
     console.log(`Ha diritto ad uno sconto del 20% come possessore della Carta Senior: Prezzo = ${trainPrice.toFixed(2)}€`)
     document.querySelector('#discount-price').innerHTML = `<span style="color: green;">Scontato: ${trainPrice.toFixed(2)}€</span>`;
-    document.querySelector('#card-type').innerHTML = `<span style="color: blue;">Come possessore della Carta Senior ha diritto ad uno sconto del 40% sul totale</span>`;
+    document.querySelector('#card-type').innerHTML = `<span style="color: red;">Come possessore della Carta Senior ha diritto ad uno sconto del 40% sul totale</span>`;
 } else {
     console.log(`Non abbiamo piani di sconto per la sua fascia di età: Prezzo = ${trainPrice.toFixed(2)}€`)
-    document.querySelector('#card-type').innerHTML = `<span style="color: blue;">Il nostro piano tariffario non prevede sconti per la sua fascia d'età</span>`;
+    document.querySelector('#card-type').innerHTML = `<span style="color: red;">Il nostro piano tariffario non prevede sconti per la sua fascia d'età</span>`;
 }
