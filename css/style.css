@@ -8,7 +8,7 @@ body {
     position: relative;
     height: 100vh;
     width: 100vw;
-    max-width: 68.75rem;
+    max-width: 56.25rem;
     margin: auto;
 }
 
@@ -30,22 +30,21 @@ h1 {
 
 .row {
     display: flex;
+    justify-content: space-between;
     flex-wrap: nowrap;
 }
 
-
 .col {
-    width: 50%;
+    padding: 1.875rem 1.25rem;
 }
-
 .details {
-    font-size: 1.875rem;
-    margin: 1.25rem 0 1.25rem 1.25rem;
+   font-size: 1.875rem;
+   margin-bottom: 1.875rem;
 }
 
 .price {
     font-size: 1.875rem;
-    margin: 1.25rem 0 1.25rem 1.25rem;
+    margin-bottom: 1.875rem;
 }
 
 #card-type {
