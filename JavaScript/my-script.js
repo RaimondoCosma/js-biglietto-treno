@@ -15,3 +15,7 @@ console.log(`I chilometri percorsi sono: ${myDistance}`);
 // 2. Imposto variabile che fa scegliere l'età
 const age = Number(prompt(`Imposta la tua età:`));
 console.log(`La tua età è di: ${age} anni`);
+
+// 3. Imposto il prezzo del biglietto
+let trainPrice = myDistance * 0.21
+console.log(`Il prezzo totale del biglietto è di: ${trainPrice}€`);
