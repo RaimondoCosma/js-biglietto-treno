@@ -11,11 +11,19 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 // 1. Imposto variabile che fa scegliere il numero di chilometri all'utente
 let myDistance = Number(prompt(`Scegli il numero di chilometri da percorrere:`));
 console.log(`I chilometri percorsi sono: ${myDistance}`);
+if (typeof myDistance === 'string') {
+    alert('Inserisci un numero corretto. La pagina verrà riavviata!')
+    window.location.reload();
+}
 document.querySelector('#your-distance').innerHTML = `${myDistance}km`;
 
 // 2. Imposto variabile che fa scegliere l'età
 const age = Number(prompt(`Imposta la tua età:`));
 console.log(`La tua età è di: ${age} anni`);
+if (typeof age === 'string') {
+    alert('Inserisci un numero corretto. La pagina verrà riavviata!')
+    window.location.reload();
+}
 document.querySelector('#your-age').innerHTML = `${age}`;
 
 // 3. Imposto il prezzo del biglietto
@@ -41,5 +49,4 @@ if (age < 18) {
 } else {
     console.log(`Non abbiamo piani di sconto per la sua fascia di età: Prezzo = ${trainPrice.toFixed(2)}€`)
     document.querySelector('#card-type').innerHTML = `<span style="color: blue;">Il nostro piano tariffario non prevede sconti per la sua fascia d'età</span>`;
-
 }
