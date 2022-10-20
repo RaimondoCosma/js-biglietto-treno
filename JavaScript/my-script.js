@@ -10,6 +10,8 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 
 // 1. Imposto variabile che fa scegliere il numero di chilometri all'utente
 let myDistance = Number(prompt(`Scegli il numero di chilometri da percorrere:`));
-console.log(myDistance);
+console.log(`I chilometri percorsi sono: ${myDistance}`);
 
 // 2. Imposto variabile che fa scegliere l'età
+const age = Number(prompt(`Imposta la tua età:`));
+console.log(`La tua età è di: ${age} anni`);
