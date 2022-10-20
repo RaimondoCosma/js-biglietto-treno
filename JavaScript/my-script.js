@@ -40,11 +40,13 @@ if (age < 18) {
     trainPrice = trainPrice - youngCardPrice;
     console.log(`Ha diritto ad uno sconto del 20% come possessore della Carta Young: Prezzo = ${trainPrice.toFixed(2)}€`)
     document.querySelector('#discount-price').innerHTML = `<span style="color: green;">Scontato: ${trainPrice.toFixed(2)}€</span>`;
+    document.querySelector('#total-price').style.textDecoration = "line-through";
     document.querySelector('#card-type').innerHTML = `<span style="color: red;">Come possessore della Carta Young ha diritto ad uno sconto del 20% sul totale</span>`;
 } else if (age >= 65){
     trainPrice = trainPrice - seniorCardPrice;
     console.log(`Ha diritto ad uno sconto del 20% come possessore della Carta Senior: Prezzo = ${trainPrice.toFixed(2)}€`)
     document.querySelector('#discount-price').innerHTML = `<span style="color: green;">Scontato: ${trainPrice.toFixed(2)}€</span>`;
+    document.querySelector('#total-price').style.textDecoration = "line-through";
     document.querySelector('#card-type').innerHTML = `<span style="color: red;">Come possessore della Carta Senior ha diritto ad uno sconto del 40% sul totale</span>`;
 } else {
     console.log(`Non abbiamo piani di sconto per la sua fascia di età: Prezzo = ${trainPrice.toFixed(2)}€`)
