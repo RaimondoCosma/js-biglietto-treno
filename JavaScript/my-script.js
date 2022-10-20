@@ -11,7 +11,7 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 // 1. Imposto variabile che fa scegliere il numero di chilometri all'utente
 let myDistance = Number(prompt(`Scegli il numero di chilometri da percorrere:`));
 console.log(`I chilometri percorsi sono: ${myDistance}`);
-if (typeof myDistance === 'string') {
+if (isNaN(myDistance)) {
     alert('Inserisci un numero corretto. La pagina verrà riavviata!')
     window.location.reload();
 }
@@ -20,7 +20,7 @@ document.querySelector('#your-distance').innerHTML = `${myDistance}km`;
 // 2. Imposto variabile che fa scegliere l'età
 const age = Number(prompt(`Imposta la tua età:`));
 console.log(`La tua età è di: ${age} anni`);
-if (typeof age === 'string') {
+if (isNaN(age)) {
     alert('Inserisci un numero corretto. La pagina verrà riavviata!')
     window.location.reload();
 }
